@@ -1,0 +1,40 @@
+@import 'normalize.css'
+@import 'styles/config.sass'
+@import 'styles/partials/fonts' 
+@import 'styles/partials/variables'
+
+html
+  min-height: 100%
+  position: relative
+
+body
+  background: $color--white
+  font-family: $helvetica--thin 
+
+  *
+    outline: none
+
+[class^="overflow-hidden"]
+  overflow: hidden
+
+h1, h2, h3, h4, h5, h6
+  font-family: $ATw--semibold
+  margin: 0
+
+h2
+  font-size: 48px
+  line-height: 64px
+
+p
+  font-size: 14px
+  line-height: 24px
+  font-family: $helvetica--light
+  color: $color--black
+
+@mixin label
+  font-family: $ATw--semibold
+  font-size: 14px
+  color: $color--dark-gray
+
+label
+  @include label

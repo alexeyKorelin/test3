@@ -1,0 +1,28 @@
+@import 'styles/partials/mixins.sass'
+  
+.root
+  margin-bottom: 20px
+
+.logo
+  display: inline-flex
+  vertical-align: sub
+  align-items: center
+  margin-left: 0
+  margin-top: 8px
+  width: 100%
+
+  img
+    width: 27.3%
+
+  img:not(:last-child)
+    margin-right: 10px
+
+  @include respond-to('sm')
+    margin-top: -8px
+    margin-left: 20px
+    width: auto
+
+    img
+      width: max-content
+      &:not(:last-child)
+        margin-right: 20px

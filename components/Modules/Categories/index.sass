@@ -1,0 +1,74 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  overflow: hidden
+
+  @include respond-to('md')
+    overflow: initial
+
+.inner
+  text-align: center    
+  overflow-y: hidden
+  overflow-x: scroll
+  margin-bottom: -50px
+  padding-bottom: 50px
+  -webkit-overflow-scrolling: touch
+
+  @include respond-to('md')
+    padding-bottom: 0
+    margin-bottom: 0
+    overflow-x: hidden
+
+.padding
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 1px
+  display: inline-flex
+
+  @include respond-to('md')
+    padding-left: 0
+    padding-right: 0
+
+.ul
+  list-style: none
+  padding: 0
+  display: inline-flex
+  padding-bottom: 2px
+  margin: 20px -20px 0
+  border-bottom: 1px solid $color--medium-gray
+
+  @include respond-to('md')
+    margin: 20px 0 0
+
+.li
+  display: inline-block
+
+  &:first-child
+    margin-left: -5px
+
+  &:last-child
+    margin-right: -5px
+
+  &:not(:last-child)
+    margin-right: 10px
+
+.a
+  position: relative
+  text-transform: lowercase
+  
+  &:after
+    content: ''
+    position: absolute
+    left: 5px
+    right: 5px
+    height: 3px
+    display: block
+    border-radius: 5px
+    bottom: -4px
+    background: transparent
+    transition: all .5s
+
+  &:hover, &_active
+    &:after      
+      background: $color--black

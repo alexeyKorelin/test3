@@ -1,0 +1,21 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  width: 100%
+  box-sizing: border-box
+  margin-left: auto
+  margin-right: auto
+  padding-right: 20px
+  padding-left: 20px
+  overflow-x: hidden
+
+  @include respond-to('sm')
+    max-width: 720px
+
+  @include respond-to('md')
+    overflow-x: auto
+    padding-left: ($container_width - $inner_width + $gutter) / 2 + px
+    padding-right: ($container_width - $inner_width + $gutter) / 2 + px
+    width: $container_width + px
+    max-width: $container_width + px

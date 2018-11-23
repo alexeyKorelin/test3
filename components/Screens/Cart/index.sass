@@ -1,0 +1,42 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  background-color: $color--white
+  padding-bottom: 65px
+  
+.h2
+  font-size: 24px
+  font-weight: bold
+  position: relative
+  &.disable
+    color: $color--gray
+    cursor: not-allowed
+    i
+      transform: rotate(0deg)
+  &.rotate
+    i
+      transform: rotate(0deg)
+  i
+    transform: rotate(180deg)
+    position: absolute
+    top: 2px
+    margin-left: 8px
+    &:hover
+      cursor: pointer
+  
+.h4
+  margin-bottom: 16px
+
+.tooltip
+  margin-left: 8px
+  cursor: pointer
+
+.mobileTotal
+  display: block
+  @include respond-to('md')
+    display: none
+  &__desktop
+    display: none
+    @include respond-to('md')
+      display: block

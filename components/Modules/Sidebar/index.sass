@@ -1,0 +1,36 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 99999
+  background: $color--black
+  transform: translateX(-100%)
+  overflow: auto
+  transition: transform .2s ease
+
+  @include respond-to('sm')
+    width: 300px
+
+  &_open
+    transform: translateX(0)
+
+.inner
+  padding: 35px 20px 50px
+  min-height: 100%
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+
+.close
+  margin-left: -5px
+  margin-top: -5px
+  padding: 5px
+  background: transparent
+  border: none
+  color: $color--white
+  cursor: pointer

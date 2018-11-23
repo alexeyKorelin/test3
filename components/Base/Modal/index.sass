@@ -1,0 +1,75 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  $root: &
+
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow-y: scroll
+  overflow-x: auto
+  z-index: 10000
+  background-color: rgba(252, 252, 252, 0.9)
+  visibility: visible
+  padding-top: 10px
+  padding-bottom: 10px
+  text-align: center
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+
+.table
+  display: table
+  table-layout: fixed
+  width: 100%
+  height: 100%
+
+.cell
+  display: table-cell
+  vertical-align: middle
+
+.popup
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  display: block
+  box-sizing: border-box
+  max-width: 500px
+  width: auto
+  min-height: 184px
+  padding: 40px 40px 50px 40px
+  text-align: center
+  box-shadow: 0 4px 20px 0 #E1E8EE
+  transition: background-color 0.3s
+  background-color: $color--black
+  color: $color--white
+
+  @include respond-to('sm')
+    padding: 40px 100px 50px 100px
+
+.close
+  position: absolute
+  top: 20px
+  right: 20px
+  z-index: 1002
+  background: transparent
+  width: 18px
+  height: 18px
+  padding: 0
+  border: none
+  outline: none
+  cursor: pointer
+
+  &__icon
+    color: $color--white
+    line-height: 15px
+    font-size: 15px

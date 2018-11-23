@@ -1,0 +1,46 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  background: $color--dark-white
+  color: $color--black
+  padding-top: 45px
+  padding-bottom: 62px
+
+  @include respond-to('md')
+    padding-top: 70px
+    padding-bottom: 65px
+
+.title
+  margin-top: 0
+  font-size: 40px
+  line-height: 60px
+
+  @include respond-to('md')
+    font-size: 64px
+    line-height: 80px
+
+.col2
+  margin-top: 35px
+
+  @include respond-to('md')
+    margin-top: 10px
+
+.question
+  margin-bottom: 10px
+
+.all
+  margin-left: -5px
+
+  &_md
+    display: none
+    margin-top: 20px
+
+    @include respond-to('md')
+      display: inline-block
+
+  &_xs
+    margin-top: 10px
+
+    @include respond-to('md')
+      display: none

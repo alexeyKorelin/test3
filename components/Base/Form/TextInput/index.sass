@@ -1,0 +1,65 @@
+@import 'styles/partials/variables.sass'
+
+.root
+  margin-bottom: 18px
+  text-align: left
+  label
+    display: inline-block
+    margin-bottom: 6px
+  &.error
+    label
+      color: red
+    .input
+      border: 1px solid red
+
+.input
+  width: 100%
+  margin: 0
+  padding: 17.5px 18px
+  color: $color--black
+  background: $color--white
+  border: 1px solid $color--medium-gray
+  outline: none
+  box-shadow: none
+  font-size: 12px
+  box-sizing: border-box
+  &:focus, &.focus
+    border-color: $color--black
+  &.invalid
+    border-color: red
+
+.suggest
+  position: relative
+
+.suggests
+  color: $color--black
+  position: absolute
+  margin: 5px 0 0
+  padding: 0
+  list-style: none
+  z-index: 1
+  background: transparent
+  width: 100%
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  max-height: 210px
+  overflow: auto
+
+  &_hidden
+    max-height: 0
+    border: none
+
+.suggestItem
+  background-color: #fff
+  transition: background-color 0.3s
+  cursor: pointer
+  font-size: 14px
+  line-height: 21px
+  padding: 13px 19px 14px 19px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+  &:hover, &_active
+    background-color: #f8f9fb

@@ -1,0 +1,65 @@
+@import 'styles/config.sass'
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  display: none
+
+  @include respond-to('md')
+    padding: 65px 0
+    display: flex
+  
+.sidebar
+  position: relative
+
+.menu
+  list-style: none
+  padding: 6px 0 0
+  margin: 0
+  width: 220px
+  
+  &_fixedTop
+    position: fixed
+
+  &_absoluteBottom
+    position: absolute
+    bottom: 0px
+
+  li
+    position: relative
+    height: 60px
+    display: flex
+    align-items: center
+
+  a
+    color: $color--black
+    text-decoration: none
+    font-family: $ATw--semibold
+    font-size: 12px
+    padding: 0 20px 0 32px
+
+  &__active
+    background-image: url(#{$asset_host}/assets/badge.png)
+    background-repeat: no-repeat
+    background-size: contain
+
+    a
+      font-family: $ATw
+      color: $color--white
+
+.answer
+  padding: 20px
+  opacity: .6
+
+  h5
+    font-family: $ATw--bold
+    font-size: 14px
+    letter-spacing: 1.75px
+    margin-bottom: 15px
+
+  &__active
+    background-color: $color--dark-white
+    opacity: 1
+
+  a
+    color: $color--black

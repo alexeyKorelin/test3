@@ -1,0 +1,69 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  position: relative
+
+  @include respond-to('sm')
+    width: 460px
+  
+.slide
+  &__inner
+    position: relative
+    cursor: pointer
+
+    & > div
+      display: flex
+      height: 100%
+      align-items: center
+      justify-content: center
+
+    @include respond-to('sm')
+      min-height: 460px
+
+  &__img
+    width: 100%
+
+.preloader
+  position: absolute
+  z-index: 3
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.controls
+  position: absolute
+  z-index: 1
+  background: $color--white
+  display: flex
+  align-items: center
+  padding: 9px 15px 8px
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 23px
+
+  @include respond-to('md')
+    left: initial
+    transform: translateX(0)
+    bottom: 65px
+    right: 0
+
+.arrow, .page
+  background: transparent
+  border: none
+  cursor: pointer
+
+.page
+  font-family: $ATw--semibold
+  font-size: 14px
+  color: $color--dark-gray
+  letter-spacing: 1.75px
+  padding: 3px
+  transition: all .3s
+
+  &_active, &:hover
+    color: $color--black
+
+.arrow
+  font-size: 6px
+  padding: 3px 5px

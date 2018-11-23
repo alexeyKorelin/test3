@@ -1,0 +1,31 @@
+@import 'styles/partials/variables.sass'
+
+.root
+  padding: 30px
+  background-color: $color--dark-white
+  position: sticky
+  top: 20px
+
+.table
+  border-collapse: collapse
+  width: 100%
+  margin-bottom: 20px
+  tr
+    line-height: 32px
+  .label
+    font-family: $ATw--semibold
+    font-size: 12px
+    color: $color--dark-gray
+  .right
+    text-align: right
+    &.bold
+      font-family: $ATw--semibold
+      font-size: 18px
+      color: $color--black
+  .separator
+    border-top: 1px solid $color--medium-gray
+
+.clear
+  button
+    display: block
+    margin: 8px auto 0 auto

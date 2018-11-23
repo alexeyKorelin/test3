@@ -1,0 +1,37 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: relative
+  height: 100%
+
+.top, .bottom
+  text-decoration: none  
+
+.thumb
+  max-width: 100%
+
+.title
+  color: $color--black
+  margin-top: 10px
+  margin-bottom: 0
+  font-size: 16px
+  line-height: 18px
+
+  @include respond-to('md')
+    font-size: 24px
+    line-height: 30px
+
+.price
+  font-family: $helvetica--thin
+  font-size: 18px
+  color: $color--black
+  margin-top: 12px
+  display: inline-block
+
+.add
+  margin-top: 15px

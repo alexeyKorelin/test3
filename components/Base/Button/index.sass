@@ -1,0 +1,148 @@
+@import 'styles/config.sass'
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  text-align: center
+  cursor: pointer
+  transition: all 0.3s
+
+.primary
+  text-decoration: none
+  height: 50px
+  box-sizing: border-box
+  padding-top: 0
+  padding-right: 18px
+  padding-left: 18px
+  padding-bottom: 0
+  overflow: hidden
+  text-overflow: ellipsis
+  font-family: $ATw--semibold
+  font-size: 14px
+  letter-spacing: 1.75px
+  display: inline-flex 
+  align-items: flex-start  
+  justify-content: center 
+  line-height: 48px
+  text-transform: lowercase
+  white-space: nowrap
+
+  @include respond-to('md')
+    padding-right: 24px
+    padding-left: 24px
+
+.link
+  font-family: $ATw--semibold
+  background: transparent
+  border: none
+  font-size: 14px
+  padding: 5px
+  display: inline-block
+  letter-spacing: 1.75px
+  text-decoration: underline
+  background: transparent
+  border: none
+  text-decoration: none
+
+  &:after
+    content: ''
+    height: 1px
+    background: transparent
+    display: block
+    transition: all .3s
+
+.painted
+  text-decoration: none
+  height: 50px
+  box-sizing: border-box
+  padding-top: 0
+  padding-right: 35px
+  padding-left: 35px
+  padding-bottom: 0
+  overflow: hidden
+  text-overflow: ellipsis
+  font-family: $ATw--semibold
+  font-size: 14px
+  letter-spacing: 1.75px
+  display: inline-flex 
+  align-items: flex-start  
+  justify-content: center 
+  line-height: 48px
+  text-transform: lowercase
+
+.block
+  display: block
+  width: 100%
+
+/* Colors */
+.primary
+  &.fixedWhite
+    background: $color--white
+    border: 1px solid $color--black
+    color: $color--black
+
+  &.white
+    background: $color--white
+    border: 1px solid $color--white
+    color: $color--black
+
+    &:hover
+      background: transparent
+      color: $color--white
+
+    &.reverse
+      background: transparent
+      color: $color--white
+
+      &:hover
+        background: $color--white
+        color: $color--black
+
+  &.black
+    background: $color--black
+    border: 1px solid $color--black
+    color: $color--white
+
+    &:hover
+      background: transparent
+      color: $color--black
+
+    &.reverse
+      background: transparent
+      color: $color--black
+
+      &:hover
+        background: $color--black
+        color: $color--white
+
+.link
+  &.white
+    color: $color--white
+
+    &:hover
+      &:after
+        background: $color--white
+
+  &.black
+    color: $color--black
+
+    &:hover
+      &:after
+        background: $color--black
+
+  &.gray
+    color: $color--gray
+
+    &:hover
+      &:after
+        background: $color--gray
+
+.painted
+  &.black
+    background-image: url(#{$asset_host}/assets/painted.svg)
+    background-size: 100% 100%
+    color: $color--white
+
+/* Utils */
+.nounderline
+  text-decoration: none

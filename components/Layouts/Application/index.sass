@@ -1,0 +1,20 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  padding-bottom: 250px
+
+  @include respond-to('md')
+    padding-bottom: 267px
+
+.main
+  margin-top: 80px
+  
+  &_isMain
+    margin-top: 0
+
+.footer
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0

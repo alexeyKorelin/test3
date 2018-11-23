@@ -1,0 +1,20 @@
+@import 'styles/config.sass'
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.root
+  @include respond-to('md')
+    display: none
+
+.title
+  color: $color--gray
+  font-size: 40px
+  margin-top: 15px
+
+.questions
+  margin-top: 20px
+  margin-bottom: 65px
+
+.question
+  &:not(:last-child)
+    margin-bottom: 10px

@@ -1,0 +1,257 @@
+@import 'styles/config.sass'
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+
+.col1
+  order: 1
+  display: flex
+  flex-direction: column
+
+  @include respond-to('md')
+    display: block
+    flex-direction: column
+    order: unset
+
+.col2
+  order: 0
+
+  @include respond-to('md')
+    order: unset
+
+.product
+  margin-top: 18px
+  margin-bottom: 50px
+
+  @include respond-to('md')
+    margin-bottom: 70px
+
+.title
+  font-size: 24px
+  margin-top: 16px
+
+  @include respond-to('md')
+    margin-top: 0
+
+.description
+  order: 2
+  border-bottom: 1px solid $color--medium-gray
+  margin-top: 5px
+  padding-bottom: 20px
+
+  @include respond-to('md')
+    border-bottom: 0
+    margin-top: 14px
+    padding-bottom: 0
+
+.options
+  margin-top: 22px
+  padding-bottom: 20px
+  order: 1
+
+  @include respond-to('md')
+    order: unset
+    border-bottom: 1px solid $color--medium-gray
+
+.option
+  $root: &
+
+  font-size: 12px
+  display: flex
+  align-items: center
+  flex-wrap: nowrap
+
+  &:not(:last-child)
+    margin-bottom: 18px
+
+  &_colors, &_sizes
+    #{$root}
+      &:not(:last-child)
+        margin-bottom: 13px
+
+      &__label
+        margin-top: -5px
+
+  &__label
+    font-family: $ATw
+    color: $color--gray
+    margin-right: 10px
+
+  &__value
+    font-family: $helvetica--medium
+    text-transform: lowercase
+
+  &__options
+
+  &__size
+    border: none
+    background: transparent
+    color: $color--gray
+    height: 23px
+    padding: 0 9px
+    line-height: 23px
+    cursor: pointer
+    margin-bottom: 5px
+    transition: all .3s
+
+    &:not(:last-child)
+      margin-right: 5px
+
+    &_active
+      background: $color--black
+      color: $color--white
+
+.br
+  display: flex
+  width: 100%
+
+.color
+  display: inline-flex
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  border: none
+  padding: 0
+  overflow: hidden
+  cursor: pointer
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2)
+  position: relative
+  margin-bottom: 5px
+  transition: all .3s
+
+  &:hover
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.5)
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  &:after
+    content: ''
+    position: absolute
+    z-index: 1
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-image: url(#{$asset_host}/assets/check.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    opacity: 0
+    transition: all .3s
+
+  &:disabled
+    cursor: not-allowed
+    opacity: .5
+
+  &_active
+    &:after
+      opacity: 1
+
+    &:disabled
+      opacity: 1
+      cursor: default
+
+  &__section
+    display: flex
+    height: 20px
+    width: 20px
+    transition: background .3s
+
+    &:not(:last-child), &:not(:first-child)
+      width: 10px
+
+.characts
+  margin-top: 10px
+  order: 3
+  text-align: center
+
+  @include respond-to('md')
+    margin-top: 22px
+    order: unset
+    text-align: left
+
+.charact
+  $root: &
+
+  font-size: 12px
+
+  &:not(:last-child)
+    margin-bottom: 10px
+
+  &_colors
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:not(:last-child)
+      margin-bottom: 5px
+
+    @include respond-to('md')
+      justify-content: flex-start
+
+    .color
+      cursor: default
+
+      &:after
+        display: none
+
+    #{$root}
+      &__label
+        margin-top: -5px
+
+  &__label
+    font-family: $helvetica--ultra_light
+    margin-right: 5px
+
+  &__value
+    font-family: $helvetica--medium
+    text-transform: lowercase
+
+.price
+  font-family: $ATw--semibold
+  color: $color--black 
+  font-size: 16px 
+  margin-top: 18px
+  order: 4
+  text-align: center
+
+  @include respond-to('md')
+    order: unset 
+    font-size: 20px 
+    text-align: left
+
+.another
+  margin-top: 15px
+  opacity: .7
+  font-size: 12px !important
+
+  @include respond-to('sm')
+    margin-top: 0
+    margin-left: 15px
+
+  @include respond-to('md')
+    font-size: 14px !important
+
+.controls
+  margin-top: 26px
+  order: 5
+  text-align: center
+
+  @include respond-to('md')
+    order: unset
+    text-align: left
+
+  &__br
+    display: block
+
+    @include respond-to('sm')
+      display: none
+
+.slider
+  margin-left: -20px
+  margin-right: -20px
+
+  @include respond-to('sm')
+    margin-left: auto
+    margin-right: auto

@@ -1,0 +1,12 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.root
+  display: flex
+  flex-wrap: wrap
+  margin-left: -5px
+  margin-right: -5px
+
+  @include respond-to('sm')
+    margin-left: -1 * $gutter / 2 + px
+    margin-right: -1 * $gutter / 2 + px

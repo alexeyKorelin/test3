@@ -1,0 +1,145 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+.footer
+  background: $color--black
+
+.inner
+  padding-top: 28px
+  box-sizing: border-box
+  height: 250px
+  overflow: hidden
+
+  @include respond-to('md')
+    padding-top: 42px
+    height: 267px
+
+.col1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding-top: 6px
+  order: 1
+
+  @include respond-to('md')
+    order: unset
+
+  &__info
+    margin-top: 40px
+
+  &__col1
+    text-align: center
+    margin-top: 16px
+
+    @include respond-to('md')
+      text-align: initial
+      margin-top: 20px
+
+  &__col2
+    text-align: right
+
+    @include respond-to('md')
+      text-align: initial
+
+.col4
+  text-align: left
+  order: 0
+
+  @include respond-to('md')
+    order: unset
+    display: flex
+    flex-direction: column
+    justify-content: space-between  
+
+  &__call
+    text-align: center
+    align-self: flex-end
+
+  &__info
+    text-align: right
+
+.payments
+  justify-content: center
+  margin-top: 15px
+
+  @include respond-to('md')
+    margin-top: 24px
+    justify-content: initial
+
+.logo
+  opacity: .49    
+  align-self: flex-start
+  display: none
+
+  @include respond-to('md')
+    display: inline-block
+
+.instagram
+  font-family: $helvetica--bold
+  color: $color--light-gray
+  text-decoration: none
+  font-size: 14px
+  letter-spacing: 1.75px
+
+.copyright, .list__a, .address
+  color: $color--white
+  font-size: 14px
+  font-family: $helvetica--thin 
+
+.copyright   
+  margin-top: 24px
+  display: inline-block
+
+  @include respond-to('md')
+    margin-top: 8px
+
+.list
+  display: none
+
+  @include respond-to('md')
+    display: block
+
+  &__header
+    color: $color--gray
+    font-size: 14px
+    font-family: $helvetica--bold
+
+  &__ul
+    list-style: none
+    padding: 0
+    margin-top: 16px
+    margin-bottom: 0
+
+  &__li
+    &:not(:last-child)
+      margin-bottom: 15px
+
+  &__a
+    text-decoration: none
+
+.call
+  width: 280px
+  max-width: 100%
+
+  @include respond-to('md')
+    max-width: none
+    width: 220px
+    margin-top: 20px
+
+.phone
+  font-family: $helvetica--medium
+  font-size: 24px
+  color: $color--white
+  text-decoration: none
+  display: none
+
+  @include respond-to('md')
+    display: inline-block
+
+.address    
+  margin-top: 5px
+  text-decoration: none
+  display: none
+
+  @include respond-to('md')
+    display: inline-block

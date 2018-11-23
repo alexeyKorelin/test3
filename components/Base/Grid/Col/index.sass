@@ -1,0 +1,44 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+
+/* Utils */
+@mixin colWidth($col)
+  flex: 0 0 percentage($col / $cols_count)
+  max-width: percentage($col / $cols_count)
+
+@mixin colOffset($col)
+  margin-left: percentage($col / $cols_count)
+
+@mixin generateCols($prefix)
+  @for $i from 1 through $cols_count
+    .root_#{$prefix}#{$i}
+      @include colWidth($i)
+
+@mixin generateOffset($prefix)
+  @for $i from 1 through $cols_count - 1
+    .root_#{$prefix}offset_#{$i}
+      @include colOffset($i)
+
+/* root Col */
+.root
+  flex: 0 0 100%
+  position: relative
+  width: 100%
+  box-sizing: border-box
+  min-height: 1px
+  max-width: 100%
+  padding-left: 5px
+  padding-right: 5px
+
+  @include respond-to('sm')
+    padding-left: $gutter / 2 + px
+    padding-right: $gutter / 2 + px
+
+/* xs, sm, md,... */
+@include generateCols('xs_')
+@include generateOffset('xs_')
+
+@each $breakpoint-value, $breakpoint-key in $breakpoints
+  @media (min-width: $breakpoint-key + 'px')
+    @include generateCols($breakpoint-value + '_')
+    @include generateOffset($breakpoint-value + '_')

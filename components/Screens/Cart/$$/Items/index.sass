@@ -1,0 +1,128 @@
+@import 'styles/partials/variables.sass'
+@import 'styles/partials/mixins.sass'
+  
+.thumb
+  flex: 0 0 50px
+  max-width: 50px
+  img
+    max-width: 100%
+  @include respond-to('sm')
+    flex: 0 0 150px
+    max-width: 150px
+
+.item
+  position: relative
+  i
+    opacity: .2
+    position: absolute
+    right: 5px
+    top: 15px
+    cursor: pointer
+    z-index: 3
+
+    @include respond-to('sm')
+      left: -10px
+      top: 58px
+
+  .right
+    margin: 0 5px 20px 5px
+    padding: 0 0 15px 0
+    border-bottom: 1px solid $color--medium-gray
+    flex-grow: 1
+    max-width: 100%
+    flex: auto
+    @include respond-to('sm')
+      flex-basis: 0
+      margin: 0 10px 20px 10px
+      padding: 0 0 25px 0
+
+.title
+  margin-bottom: 14px
+  a
+    color: $color--black
+    text-decoration: none
+  &__mobile
+    display: flex
+    flex-basis: 0
+    flex-grow: 1
+    align-items: center
+    h3
+      margin: 0
+      padding-right: 15px
+    @include respond-to('sm')
+      display: none
+
+  &__desktop
+    display: none
+    @include respond-to('sm')
+      display: block
+
+.options
+  font-family: $helvetica--medium
+  font-size: 12px
+  color: $color--black
+  flex-basis: 0
+  flex-grow: 1
+  max-width: 100%
+  span
+    font-size: 12px
+    font-family: $ATw
+    color: $color--dark-gray
+  div:first-child
+    margin-top: 9px
+  div:not(:last-child)
+    margin-bottom: 16px
+  .color
+    span:nth-child(2)
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 6px
+  &__row
+    flex-direction: column
+    > div
+      flex-basis: auto
+    @include respond-to('sm')
+      flex-direction: row
+      > div
+        flex-basis: 0
+
+.quantity
+  flex-basis: 0
+  flex-grow: 1
+  max-width: 100%
+  @include respond-to('sm')
+    text-align: right
+  span
+    font-size: 12px
+    font-family: $ATw
+    color: $color--dark-gray
+    display: none
+    margin-top: 10px
+    @include respond-to('sm')
+      display: inline-block
+  div
+    margin-left: 0px
+    margin-top: 10px
+    margin-bottom: 10px
+    display: inline-block
+    @include respond-to('sm')
+      margin-left: 10px
+      margin-top: 0
+      margin-bottom: 18px
+    input
+      width: 50px
+      padding: 8px 10px
+      text-align: center
+
+.price
+  font-family: $ATw--semibold
+  font-size: 18px
+  flex-basis: 0
+  flex-grow: 1
+  max-width: 100%
+  padding-top: 6px
+  @include respond-to('sm')
+    text-align: right

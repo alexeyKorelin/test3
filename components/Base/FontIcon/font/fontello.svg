@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="close" unicode="&#xe800;" d="M951-150c-15 0-25 5-35 15l-901 901c-20 20-20 50 0 69s49 20 69 0l901-901c20-20 20-50 0-69-10-10-19-15-34-15z m-902 0c-14 0-24 5-34 15-20 19-20 49 0 69l901 901c20 20 50 20 69 0s20-49 0-69l-901-901c-10-10-20-15-35-15z" horiz-adv-x="1000" />
+
+<glyph glyph-name="question" unicode="&#xe801;" d="M500 850c-276 0-500-224-500-500 0-276 224-500 500-500 276 0 500 224 500 500 0 276-224 500-500 500z m39-788c0-22-18-39-39-39-21 0-38 17-38 39l0 38c0 21 17 39 38 39 21 0 39-18 39-39l0-38z m55 316c-34-22-55-64-55-108l0-55c0-21-18-38-39-38-21 0-38 17-38 38l0 55c0 71 33 136 90 172 28 18 45 49 44 82-1 51-44 95-95 95-26 2-50-9-68-27-19-19-29-43-29-69 0-21-17-38-39-38-21 0-38 17-38 38 0 47 18 91 52 123 32 33 75 50 121 50 1 0 2 0 3 0 92-1 169-78 170-170 1-60-29-116-79-148z" horiz-adv-x="1000" />
+
+<glyph glyph-name="chevron-down" unicode="&#xe802;" d="M875-150c-37 0-62 12-87 37l-750 751c-51 50-51 125 0 175s125 50 175 0l662-663 663 663c50 50 125 50 175 0s50-125 0-175l-750-751c-25-25-50-37-88-37z" horiz-adv-x="1750" />
+
+<glyph glyph-name="next" unicode="&#xe803;" d="M3684 350l59-59 59 59-59 59-59-59z m-391 275l332-334 118 118-332 333-118-117z m332-216l-332-333 118-118 332 333-118 118z m-3593-142h3652v166h-3652v-166z" horiz-adv-x="3833" />
+
+<glyph glyph-name="prev" unicode="&#xe804;" d="M149 350l-59 59-58-59 58-59 59 59z m273 392l-332-333 118-118 332 334-118 117z m-332-451l332-333 118 118-332 333-118-118z m3711 142h-3652v-166h3652v166z" horiz-adv-x="3833" />
+</font>
+</defs>
+</svg>
